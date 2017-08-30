@@ -38,7 +38,7 @@ Simple brute force script
 </tr>
 <tr>
 <td>-p</td>
-<td>--pass</td>
+<td>--passwords</td>
 <td>Passwords list</td>
 </tr>
 </tbody></table>
