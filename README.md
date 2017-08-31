@@ -46,4 +46,4 @@ Simple brute force script
 <code>perl XBruteForcer.pl -l list.txt -p passwords.txt</code>
 <br><br><strong>for coloring in windows Add This Line</strong><br>
 <code>use Win32::Console::ANSI;</code><br>
-<img src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" alt="Sublist3r" title="Sublist3r in action" data-canonical-src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" style="max-width:100%;">
+<br<img src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" alt="Sublist3r" title="Sublist3r in action" data-canonical-src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" style="max-width:100%;">
