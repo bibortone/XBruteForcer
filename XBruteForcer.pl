@@ -187,14 +187,13 @@ cms();
 
 ################ CMS DETCTER #####################
 sub cms(){
-$magsite = $site . '/admin';
-my $magcms = $ua->get("$magsite")->content;
 
+my $cms = $ua->get("$site")->content;
 if($cms =~/wp-content|wordpress/) {
    print color("bold white"), " - WordPress\n\n";
 wpuser();
 }
-my $cms = $ua->get("$site")->content;
+
 elsif($cms =~/<script type=\"text\/javascript\" src=\"\/media\/system\/js\/mootools.js\"><\/script>| \/media\/system\/js\/|com_content|Joomla!/) {
    print color("bold white"), " - Joomla\n\n"; 
 joomla();
@@ -208,6 +207,8 @@ elsif($cms =~/route=product|OpenCart|route=common|catalog\/view\/theme/) {
    print color("bold white"), " - OpenCart\n\n";
 opencart();
 }
+$magsite = $site . '/admin';
+my $magcms = $ua->get("$magsite")->content;
 elsif($magcms =~/Log into Magento Admin Page|name=\"dummy\" id=\"dummy\"|Magento/) {
    print color("bold white"), " - Magento\n\n";
 magento();
