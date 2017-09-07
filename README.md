@@ -1,7 +1,7 @@
 <pre>
                                    ______________________________________
                           ________|           X Brute Forcer             |_______
-                          \       |               v 1.1                  |      /
+                          \       |               v 1.2                  |      /
                            \      |        Coded BY Mohamed Riahi        |     /
                            /      |______________________________________|     \
                           /__________)                                (_________\
@@ -47,3 +47,11 @@ Simple brute force script
 <br><br><strong>for coloring in windows Add This Line</strong><br>
 <code>use Win32::Console::ANSI;</code>
 <br><img src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" alt="Sublist3r" title="Sublist3r in action" data-canonical-src="https://media.giphy.com/media/hVTXBi1FCdL0I/giphy.gif" style="max-width:100%;">
+<h2>Version</h2>
+<strong>Current version is 1.2</strong>
+<strong>What's New </strong>
+<p>• speed up<p>
+<p>• Bug fixes<p>
+
+<strong>version 1.1</strong>
+<p>• Bug fixes<p>
