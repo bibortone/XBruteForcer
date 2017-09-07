@@ -189,8 +189,13 @@ cms();
 sub cms(){
 $magsite = $site . '/admin';
 my $magcms = $ua->get("$magsite")->content;
+
+if($cms =~/wp-content|wordpress/) {
+   print color("bold white"), " - WordPress\n\n";
+wpuser();
+}
 my $cms = $ua->get("$site")->content;
-if($cms =~/<script type=\"text\/javascript\" src=\"\/media\/system\/js\/mootools.js\"><\/script>| \/media\/system\/js\/|com_content|Joomla!/) {
+elsif($cms =~/<script type=\"text\/javascript\" src=\"\/media\/system\/js\/mootools.js\"><\/script>| \/media\/system\/js\/|com_content|Joomla!/) {
    print color("bold white"), " - Joomla\n\n"; 
 joomla();
 }
@@ -198,10 +203,7 @@ elsif($cms =~/Drupal|drupal|sites\/all|drupal.org/) {
    print color("bold white"), " - Drupal\n\n";
 drupal();
 }
-elsif($cms =~/wp-content|wordpress/) {
-   print color("bold white"), " - WordPress\n\n";
-wpuser();
-}
+
 elsif($cms =~/route=product|OpenCart|route=common|catalog\/view\/theme/) {
    print color("bold white"), " - OpenCart\n\n";
 opencart();
